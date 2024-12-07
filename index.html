@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        integrity="sha512-Fo3r1rZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ@KaoGN26/zrn20ImR1DfuLWn007aBA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <title>Dev Burguer - A melhor hamburgueria dev!</title>
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header class="header">
+        <div class="header-content">
+            <h1 class="title">Dev Burguer</h1>
+            <span class="address">Rua Dev 10, Campo Grande - MS</span>
+            <div class="opening-hours">Seg a Dom - 18:00 às 22:00</div>
+        </div>
+        <img src="logo.png" alt="Logo" class="logo-primeiro">
+    </header>
+
+
+    <!-- NAVEGAÇÃO -->
+    <nav class="navigation">
+        <ul class="nav-links">
+            <li><a href="#tradicionais"><i class="fas fa-ice-cream"></i> Pizzas Tradicionais</a></li>
+            <li><a href="#gourmet"><i class="fas fa-coffee"></i> Pizzas Gourmet</a></li>
+            <li><a href="#regionais"><i class="fas fa-pizza-slice"></i> Pizzas Regionais</a></li>
+            <li><a href="#doces"><i class="fas fa-hamburger"></i> Pizzas Doces</a></li>
+            <li><a href="#promocoes"><i class="fas fa-tags"></i> Promoções e Combos</a></li>
+        </ul>
+    </nav>
+        
+
+
+
+    <!-- CARROSSEL -->
+    <div class="carousel">
+        <button class="carousel-btn prev-btn">&#10094;</button>
+        <div class="carousel-images">
+            <img src="carrosel1.jpg" alt="Pizza 1" class="carousel-image">
+            <img src="carrosel2.jpg" alt="Pizza 2" class="carousel-image">
+        </div>
+        <button class="carousel-btn next-btn">&#10095;</button>
+    </div>
+
+
+  
+
+
+    <section class="menu">
+        <h2 class="menu-title">Conheça nosso menu</h2>
+    
+        <h3 id="tradicionais">Pizzas Tradicionais</h3>
+        <div class="menu-grid">
+            <!-- Pizza Mussarela -->
+            <div class="menu-item">
+                <p class="menu-name">Pizza Mussarela</p>
+                <p class="menu-description">Uma combinação clássica de muçarela derretida e molho de tomate caseiro.</p>
+                <p class="menu-price" data-base-price="39.90">R$ 39,90</p>
+                <button 
+                    class="add-to-cart-btn" 
+                    data-name="Pizza Mussarela" 
+                    data-price="39.90" 
+                    onclick="openCustomPopup('Pizza Mussarela', 39.90)">
+                    Personalizar
+                </button>
+                <img src="Pizza_Mussarela.png" alt="Pizza Mussarela" class="menu-img">
+            </div>
+    
+            <!-- Pizza Calabresa -->
+            <div class="menu-item">
+                <p class="menu-name">Pizza Calabresa</p>
+                <p class="menu-description">Fatias generosas de calabresa e cebola caramelizada.</p>
+                <p class="menu-price" data-base-price="41.90">R$ 41,90</p>
+                <button 
+                    class="add-to-cart-btn" 
+                    data-name="Pizza Calabresa" 
+                    data-price="41.90" 
+                    onclick="openCustomPopup('Pizza Calabresa', 41.90)">
+                    Personalizar
+                </button>
+                <img src="Pizza_Calabresa.png" alt="Pizza Calabresa" class="menu-img">
+            </div>
+        </div>
+    
+        <h3 id="gourmet">Pizzas Gourmet</h3>
+        <div class="menu-grid">
+            <!-- Pizza Gourmet Example -->
+            <div class="menu-item">
+                <p class="menu-name">Pizza Caprese</p>
+                <p class="menu-description">Molho de tomate fresco, mussarela de búffala, tomate cereja e manjericão.</p>
+                <p class="menu-price" data-base-price="49.90">R$ 49,90</p>
+                <button 
+                    class="add-to-cart-btn" 
+                    data-name="Pizza Caprese" 
+                    data-price="49.90" 
+                    onclick="openCustomPopup('Pizza Caprese', 49.90)">
+                    Personalizar
+                </button>
+                <img src="Pizza_Caprese.png" alt="Pizza Caprese" class="menu-img">
+            </div>
+        </div>
+    
+        <h3 id="regionais">Pizzas Regionais</h3>
+        <div class="menu-grid">
+            <!-- Pizza Regional Example -->
+            <div class="menu-item">
+                <p class="menu-name">Pizza Nordestina</p>
+                <p class="menu-description">Carne de sol, queijo coalho e toque de manteiga de garrafa.</p>
+                <p class="menu-price" data-base-price="44.90">R$ 44,90</p>
+                <button 
+                    class="add-to-cart-btn" 
+                    data-name="Pizza Nordestina" 
+                    data-price="44.90" 
+                    onclick="openCustomPopup('Pizza Nordestina', 44.90)">
+                    Personalizar
+                </button>
+                <img src="Pizza_Nordestina.png" alt="Pizza Nordestina" class="menu-img">
+            </div>
+        </div>
+    
+        <h3 id="doces">Pizzas Doces</h3>
+        <div class="menu-grid">
+            <!-- Pizza Doce Example -->
+            <div class="menu-item">
+                <p class="menu-name">Pizza de Chocolate</p>
+                <p class="menu-description">Chocolate ao leite derretido com cobertura de morangos frescos.</p>
+                <p class="menu-price" data-base-price="42.90">R$ 42,90</p>
+                <button 
+                    class="add-to-cart-btn" 
+                    data-name="Pizza de Chocolate" 
+                    data-price="42.90" 
+                    onclick="openCustomPopup('Pizza de Chocolate', 42.90)">
+                    Personalizar
+                </button>
+                <img src="Pizza_Chocolate.png" alt="Pizza de Chocolate" class="menu-img">
+            </div>
+        </div>
+    
+        <h3 id="promocoes">Promoções e Combos</h3>
+        <div class="menu-grid">
+            <!-- Promo Example -->
+            <div class="menu-item">
+                <p class="menu-name">Combo Família</p>
+                <p class="menu-description">2 Pizzas grandes (Tradicional ou Gourmet) + 1 refrigerante de 2L.</p>
+                <p class="menu-price" data-base-price="89.90">R$ 89,90</p>
+                <button 
+                    class="add-to-cart-btn" 
+                    data-name="Combo Família" 
+                    data-price="89.90" 
+                    onclick="openCustomPopup('Combo Família', 89.90)">
+                    Personalizar
+                </button>
+                <img src="Combo_Familia.png" alt="Combo Família" class="menu-img">
+            </div>
+    
+            <div class="menu-item">
+                <p class="menu-name">Promoção Dupla</p>
+                <p class="menu-description">1 Pizza grande + 1 Pizza média (sabor à escolha).</p>
+                <p class="menu-price" data-base-price="69.90">R$ 69,90</p>
+                <button 
+                    class="add-to-cart-btn" 
+                    data-name="Promoção Dupla" 
+                    data-price="69.90" 
+                    onclick="openCustomPopup('Promoção Dupla', 69.90)">
+                    Personalizar
+                </button>
+                <img src="Promocao_Dupla.png" alt="Promoção Dupla" class="menu-img">
+            </div>
+        </div>
+    </section>
+    
+
+
+ 
+
+
+
+            <!-- Link para Font Awesome -->
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+
+            <div class="custom-popup" id="customPopup" style="display: none;">
+                <div class="custom-popup-content">
+                    <span class="custom-popup-close" id="closePopup">&times;</span>
+                    <h3 class="custom-popup-title">Personalize sua Pizza</h3>
+                    <form class="custom-popup-form">
+                        <!-- Massa -->
+                        <div class="custom-popup-section">
+                            <h4>Massa (Escolha 1):</h4>
+                            <label>
+                                <input type="radio" name="massa" value="Massa Fina" required> Massa Fina
+                            </label>
+                            <label>
+                                <input type="radio" name="massa" value="Massa Média" required> Massa Média
+                            </label>
+                        </div>
+        
+                        <div class="custom-popup-section">
+                            <h4>Escolha o tamanho:</h4>
+                            <div class="size-options">
+                                <label>
+                                    <input type="radio" name="size" value="small" data-size-multiplier="1.0" data-price="20.0" checked> 
+                                    Pequena (4 Fatias) - <span class="size-price" data-size="small">R$ 20,00</span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="size" value="medium" data-size-multiplier="1.5" data-price="30.0"> 
+                                    Média (6 Fatias) - <span class="size-price" data-size="medium">R$ 30,00</span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="size" value="large" data-size-multiplier="2.0" data-price="40.0"> 
+                                    Grande (8 Fatias) - <span class="size-price" data-size="large">R$ 40,00</span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="size" value="family" data-size-multiplier="3.0" data-price="60.0" data-max-flavors="4"> 
+                                    Família (12 Fatias) - <span class="size-price" data-size="family">R$ 60,00</span>
+                                </label>
+                            </div>
+                            <div class="selected-size-price">
+                                <strong>Preço do tamanho selecionado: </strong>
+                                <span id="selectedPrice">R$ 20,00</span>
+                            </div>
+                        </div>
+
+                        <div class="custom-popup-section">
+                            <h4>Escolha até <span id="maxFlavors">2</span> sabores:</h4>
+                                <div id="flavorSelection" class="flavor-grid">
+                                    <label>
+                                      <i class="fa fa-pizza-slice"></i>
+                                      <input type="checkbox" name="flavor" value="Calabresa"> Calabresa
+                                    </label>
+                                    <label>
+                                      <i class="fa fa-cheese"></i>
+                                      <input type="checkbox" name="flavor" value="Mussarela"> Mussarela
+                                    </label>
+                                    <label>
+                                      <i class="fa fa-drumstick-bite"></i>
+                                      <input type="checkbox" name="flavor" value="Frango com Catupiry"> Frango com Catupiry
+                                    </label>
+                                    <label>
+                                      <i class="fa fa-bacon"></i>
+                                      <input type="checkbox" name="flavor" value="Portuguesa"> Portuguesa
+                                    </label>
+                                  </div>
+                          </div>
+                          
+                        <!-- Bordas -->
+                        <div class="custom-popup-section">
+                            <h4>Borda (Escolha até 1, opcional):</h4>
+                            <label>
+                                <input type="radio" name="borda" value="Borda Catupiry" data-extra-price="15.90">
+                            </label>
+                            <label>
+                                <input type="checkbox" name="borda" value="Borda Cheddar" data-extra-price="15.90"> Borda Cheddar (+ R$ 15,90)
+                            </label>
+                            <label>
+                                <input type="checkbox" name="borda" value="Borda Cream Cheese" data-extra-price="15.90"> Borda Cream Cheese (+ R$ 15,90)
+                            </label>
+                            <label>
+                                <input type="checkbox" name="borda" value="Borda Creme de Avelã" data-extra-price="15.90"> Borda Creme de Avelã (+ R$ 15,90)
+                            </label>
+                        </div>
+        
+                        <!-- Refrigerante -->
+                        <div class="custom-popup-section">
+                            <h4>Refrigerante Combo (Escolha 1):</h4>
+                            <label>
+                                <input type="radio" name="refrigerante" value="Pepsi 1L" required> Pepsi 1L
+                            </label>
+                            <label>
+                                <input type="radio" name="refrigerante" value="Fanta 1L" required> Fanta 1L
+                            </label>
+                            <label>
+                                <input type="radio" name="refrigerante" value="Kuat 1L" required> Kuat 1L
+                            </label>
+                        </div>
+        
+                        <!-- Observações -->
+                        <div class="custom-popup-section">
+                            <h4>Observação (opcional):</h4>
+                            <textarea id="observacao" rows="3" placeholder="Adicione uma observação"></textarea>
+                        </div>
+        
+                        <!-- Botão de adicionar -->
+                        <button type="button" class="custom-popup-add-btn" id="addToCartBtn" disabled>Adicionar ao Carrinho</button>
+                    </form>
+                </div>
+            </div>
+
+
+
+
+
+
+    <!-- MODAL CARRINHO -->
+<div id="cart-modal" class="modal hidden">
+    <div class="modal-content">
+        <h2>Meu Carrinho</h2>
+        <div id="cart-items"></div>
+        <div id="selected-flavors">
+            <h3>Sabores Selecionados</h3>
+            <ul id="flavor-list"></ul>
+        </div>
+        <p>Total: <span id="cart-total">R$ 0,00</span></p>
+        <input type="text" id="customer-name" placeholder="Digite seu nome completo..." required />
+        <input type="text" id="address" placeholder="Digite seu endereço completo..." required />
+        <h3>Forma de Pagamento</h3>
+        <div class="payment-options">
+            <label><input type="radio" name="payment" value="Cartão" checked> Cartão </label>
+            <label><input type="radio" name="payment" value="pix"> Pix </label>
+            <label><input type="radio" name="payment" value="dinheiro"> Dinheiro </label>
+        </div>
+        <div id="pix-info" class="hidden">
+            <p>Chave Pix: <strong id="pix-key">75983178582</strong></p>
+            <button id="copy-pix-btn">Copiar Chave Pix</button>
+        </div>
+        <div class="modal-actions">
+            <button id="close-modal-btn">Fechar</button>
+            <button id="checkout-btn">Finalizar Pedido</button>
+        </div>
+    </div>
+</div>
+ 
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <button id="cart-btn">
+            (<span id="cart-count">0</span>) Ver Meu Carrinho
+            <i class="fa fa-cart-plus"></i>
+        </button>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
